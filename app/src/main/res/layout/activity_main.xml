@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ProcesarRostro"
+        android:text="A Rostro"
+        app:icon="@drawable/ic_face_id"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_cargar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OpenGallery"
+        android:text="Cargar"
+        app:icon="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_text"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="ProcesarTexto"
+        android:text="A texto"
+        app:icon="@drawable/ic_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCarga" />
+
+    <Button
+        android:id="@+id/btn_object"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="ProcesarObjeto"
+        android:text="A objeto"
+        app:icon="@drawable/ic_object"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_text" />
+
+    <TextView
+        android:id="@+id/txt_respuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_object" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
